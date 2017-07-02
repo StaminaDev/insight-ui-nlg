@@ -20,7 +20,7 @@ angular.module('insight.currency').controller('CurrencyController',
 
         if (this.symbol === 'USD') {
           response = _roundFloat((value * this.factor), 2);
-        } else if (this.symbol === 'mLTC') {
+        } else if (this.symbol === 'mNLG') {
           this.factor = 1000;
           response = _roundFloat((value * this.factor), 5);
         } else if (this.symbol === 'lites') {
@@ -47,7 +47,7 @@ angular.module('insight.currency').controller('CurrencyController',
         Currency.get({}, function(res) {
           $rootScope.currency.factor = $rootScope.currency.bitstamp = res.data.bitstamp;
         });
-      } else if (currency === 'mLTC') {
+      } else if (currency === 'mNLG') {
         $rootScope.currency.factor = 1000;
       } else if (currency === 'lites') {
         $rootScope.currency.factor = 1000000;

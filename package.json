@@ -1,8 +1,8 @@
 {
-  "name": "insight-lite-ui",
-  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the litecoin network and build your own services with it.",
+  "name": "insight-gulden-ui",
+  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the gulden network and build your own services with it.",
   "version": "0.4.2",
-  "repository": "git://github.com/litecoin-project/insight-lite-ui.git",
+  "repository": "git://github.com/guldenchain/insight-gulden-ui.git",
   "contributors": [
     {
       "name": "Matias Alejo Garcia",
@@ -28,17 +28,17 @@
   "bugs": {
     "url": "https://github.com/bitpay/insight-ui/issues"
   },
-  "homepage": "https://github.com/litecoin-project/insight-lite-ui",
+  "homepage": "https://github.com/guldenchain/insight-gulden-ui",
   "license": "MIT",
   "keywords": [
     "insight",
     "blockchain",
     "blockexplorer",
-    "litecoin",
-    "litecore",
+    "gulden",
+    "guldencore",
     "front-end"
   ],
-  "bitcoreNode": "litecore-node",
+  "bitcoreNode": "guldencore-node",
   "dependencies": {
   },
   "devDependencies": {
