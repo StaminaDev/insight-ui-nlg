@@ -15,15 +15,13 @@ angular.module('insight.currency').controller('CurrencyController',
 
       if (!isNaN(value) && typeof value !== 'undefined' && value !== null) {
         if (value === 0.00000000) return '0 ' + this.symbol; // fix value to show
-
         var response;
-
-        if (this.symbol === 'USD') {
+        if (this.symbol === 'EUR') {
           response = _roundFloat((value * this.factor), 2);
         } else if (this.symbol === 'mNLG') {
           this.factor = 1000;
           response = _roundFloat((value * this.factor), 5);
-        } else if (this.symbol === 'lites') {
+        } else if (this.symbol === 'bits') {
           this.factor = 1000000;
           response = _roundFloat((value * this.factor), 2);
         } else {
@@ -33,7 +31,7 @@ angular.module('insight.currency').controller('CurrencyController',
         // prevent sci notation
         if (response < 1e-7) response=response.toFixed(8);
 
-        return response + ' ' + this.symbol;
+        return response.toFixed(2) + ' ' + this.symbol;
       }
 
       return 'value error';
@@ -43,13 +41,13 @@ angular.module('insight.currency').controller('CurrencyController',
       $rootScope.currency.symbol = currency;
       localStorage.setItem('insight-currency', currency);
 
-      if (currency === 'USD') {
+      if (currency === 'EUR') {
         Currency.get({}, function(res) {
           $rootScope.currency.factor = $rootScope.currency.bitstamp = res.data.bitstamp;
         });
       } else if (currency === 'mNLG') {
         $rootScope.currency.factor = 1000;
-      } else if (currency === 'lites') {
+      } else if (currency === 'bits') {
         $rootScope.currency.factor = 1000000;
       } else {
         $rootScope.currency.factor = 1;
