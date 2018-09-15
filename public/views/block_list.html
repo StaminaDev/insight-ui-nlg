@@ -1,7 +1,7 @@
 <div data-ng-include src="'views/includes/connection.html'"></div>
 <section data-ng-controller="BlocksController" data-ng-init="list()">
   <div class="row">
-    <div class="col-xs-12 col-gray col-gray-fixed">
+    <div class="col-xs-12 col-gray col-gray-fixed" id="block_finder">
       <div class="block-id">
         <div class="icon-block text-center">
           <span class="glyphicon glyphicon-list"></span>
@@ -27,6 +27,12 @@
         </div>
       </div>
     </div>
+
+    <div class="col-xs-12 col-gray-fixed" id="banner">
+       <div class="text-center"><a  class="https://changenow.io/?from=btc&to=nlg&utm_source=guldenblocks&utm_medium=link&utm_campaign=change_nlg">
+          <img id="changenow_img" src="img/changenow_banner.png" style=""></a></div>
+    </div>
+
     <div class="col-xs-12 col-md-9 col-md-offset-3">
       <div class="page-header">
         <h1>
